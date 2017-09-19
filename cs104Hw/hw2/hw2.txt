@@ -1,0 +1,55 @@
+Jacob Pitts:
+
+1)
+
+Part a) 
+	README.md is tracked.
+	README.md is unmodified. 
+
+Part b)
+	README.md is modified. 
+	README.md is untracked. 
+	fun_problem.txt is untracked.
+
+Part c)
+	README.md is staged. 
+	fun_problem.txt is staged.
+
+Part d)
+	README.md is modified.
+	fun_problem.txt is modified.
+
+Part e)
+	README.md is staged. 
+	fun_problem.txt is untracked. 
+
+	fun_problem.txt was never staged. git checkout -- fun_problem.txt switches to the last commit on the branch "fun_problem.txt". Since the last change on the remote repo has nothing inside of fun_problem.txt, fun_problem.txt on the local repo is replaced with nothing, resulting in an empty file. 
+
+Part f) 
+	README.md is both modified (not staged) and modified staged. Since README.md was previously changed, comitting would result in whatever contents that were previously staged being commited whilst ignoring the recent changes.
+
+	Since the new changes were not staged, git status warns that there are some changes that will not be commited. In order to fix this, README.md must be staged using git add
+
+2) 
+	Nothing to comment on, reading was done. 
+
+3)
+
+	func(A) takes in a node pointer Node* in. Immediately following, a Node* out pointer is declared and set equal to Node* in. Out will then be iterated to the end of the linked list. If the linked list is {1,2,3,4,5}, Node* out will point to the Node holding the value of 5. This value will eventually be returned, but first.. 
+
+	func(B) is called with Node* in, which is the original head pointer passed (in this case, the pointer to the Node holding the value of 1). 
+
+	funcB() is a recursive function that is  called if Node* in -> next!= NULL. Eventually, funcB() will result in the last node of the linked list. It will then return up the list, returning pointers from the last element, to the second to last element, to the third to last element, etc, until
+	it reaches the head pointer. Each time this function returns, it causes the next pointer of 
+	of that element to point to the next element in the list.(this is observed by funcB(in->next) -> next = in). Eventually, the last element will then be set to nullptr
+	
+	Ultimately, return out will return a head pointer to the start of the reformatted list. This list will start at the pointer pointing to the node at 5, and since the rest of the list was modified by funcB(), iterating through this head pointer to the subsequent nodes results in obtaining the pointers to the nodes with the values of 5, 4, 3, 2, and 1.
+
+4) 
+	See appropriate program.
+
+5) 
+	See appropriate program.
+
+6) 
+	See appropriate program. 

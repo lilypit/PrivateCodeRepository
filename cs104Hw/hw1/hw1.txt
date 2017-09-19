@@ -1,0 +1,75 @@
+HW 1: 
+Name: Jacob Pitts
+ID: 2560541217
+
+====================================================
+
+Problem 1: Course Policies
+	Part a) The following are acceptable behaviors in solving homework/projects: 
+		- Looking up information related to the course online.
+		- Asking the course staff for help 
+
+	Part b) To dispute a grade on an assignment, we should:
+		- Assign the issue to your grader on GitHub.
+		- Go see a course TA if assigning the issue to your grader did not resolve your concern.
+		- Raise an issue within 1 week of receiving the grade.
+
+	Part c) Reccomended code editors:  
+		-Microsoft Visual Studio
+		-Eclipse
+		-GNU Emacs
+		-Sublime Text
+
+	Part d) Late submission policy: 
+		-Each student has 3 late days of which only one can be used per HW.
+
+	Part e) After submitting to github: 
+		- Complete the online submission form as you would for an on-time submission. 
+		- Start the next assignment sooner
+
+====================================================
+Problem 2: Git
+	Part a) The following git user interfaces are supported in this course:
+		-Terminal (Mac or Linux) 
+	Part b) When cloning a git repo, we should avoid:
+		-Cloning into a folder that itself is a git repo
+		-Cloning into a sync'ed folder like Dropbox or Google
+	Part c) Git commands
+		-To stage 'hw1q2b.cpp' to be commited, assuming that we are in the proper folder, we must use 'git add hw1q2b.cpp'
+		-To display the details of the last three commits, we should use the ccommand "git log -p -3"
+	Part d) If three files were commited, and git commit was used:
+	 	 If only the command "git commit" was used, the commit will not be made and the user will be prompted to write a message. 
+		 e) To clone the entire CSCI104 repo to the VM:
+		 -Use the command:  git clone <SSHUrlForRepository>
+
+====================================================
+
+Problem 4: Recursion
+
+	1) The number returned by funcA(180) is 15. This occurs through the following process:
+		
+		a) funcA(180) results in funcB(180,2) being called.
+	
+		b) 2 + funcB(180/2, 2) is then returned, since 180 is divisble by 2. We must now evaluate funcB(90,2).
+		
+		c) 2 + funcB(90/2,2) is then returned, since 90 is divisble by 2. We must now evaluate funcB(45,2).
+		
+		d) At this point, since 45 is not divisible by 2, 2 must be incremented until it reaches a number that 45 is divisible by. This number will be (45,3), resulting in an eventual return of 3 + 
+		funcB(45/3,3). We must now evaluate funcB(15,3).
+
+		c) 3 + funcB(15/5,5) is then returned, since 15 is divisble by 4. We must now evaluate funcB(5,5)
+
+		d) Since 5 == 5, 5 is returned.
+
+		e) We then proceed to add the returned numbers together, starting from the last returned number: 5 + 3 + 3 + 2 + 2 = 15
+
+	2) The call to funcA(n) will terminate if funcB(n) terminates. funcB(n) terminates under two conditions, if (n < 2), or if (i == n). Either one of these conditions will eventually be met with any known integer. 
+
+	3) funcA(n) will return the sum of the prime factorization of a n, excluding 1. 
+
+
+Problem 5: Recursion and Streams
+	Done
+
+Problem 6: Recursion
+	Done
